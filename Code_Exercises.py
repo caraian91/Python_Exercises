@@ -22,5 +22,15 @@ def unique_in_order(iterable):
 
 print(unique_in_order('ABBCcAD'))
 # --------------------------------------------------------------------------------------------------------
+'''The examples below show you how to write function accum:
+Examples: accum("abcd") -> "A-Bb-Ccc-Dddd" '''
+def accum(text):
+    result_list = list(text)
+    for i in range(len(text)):
+        # add to list multiply the characters lower and capitalize the first character
+        result_list[i] = text[i].upper() + (text[i].lower() * i)
+    return '-'.join(result_list)
 
+print(accum('abcd'))
+# --------------------------------------------------------------------------------------------------------
 
